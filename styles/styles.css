@@ -1,0 +1,573 @@
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+     display: flex;
+    flex-direction: column;
+    align-items: center; 
+     justify-content: center;
+    height: 100%;
+    width: 100vw;
+    min-width: 1200px;
+    /* overflow: hidden; */
+    margin: 0; 
+}
+
+
+:root
+{
+    --large-font:40px;
+    --mid-font:24px;
+    --base-font:14px;
+    --bright-yellow:#ffb901;
+    --soft-yellow:#ffe492;
+    --bright-blue:#3baeef;
+    --dark-blue:#043873;
+    --soft-blue:#c7e3f3;
+}
+
+
+/* #region General Styles */
+.white-font
+{
+    color: white;
+}
+
+.mid-font
+{
+    font-size: var(--mid-font);
+}
+
+.base-font
+{
+    font-size: var(--base-font);
+}
+
+.faint-blue
+{
+    color: var(--soft-blue);
+}
+
+.dark-blue
+{
+    color: var(--dark-blue);
+}
+
+.bright-yellow
+{
+    color: var(--bright-yellow);
+}
+
+.large-font
+{
+    font-size: var(--large-font);
+    font-weight: 800;
+}
+
+.base-font-size
+{
+    font-size: var(--base-font);
+}
+
+.btn
+{
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.btn:hover
+{
+    background-color: var(--soft-blue);
+    filter: brightness(80%);
+}
+
+li
+{
+    list-style-type: none;
+}
+
+
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+hr
+{
+    height: 3px;
+    border: none;
+    border-radius: 1px;
+}
+
+/* #region Making Brushstroke*/
+.brushstroke-container
+{
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.brushstroke-word-large
+{
+    position: relative;
+    display: inline-block;
+}
+
+.brushstroke-word-large::before,
+.brushstroke-word-large::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 100%;
+    height: 1rem;
+    background:url('../Images/yellow-stroke.png') no-repeat center center;
+    border-radius: .25rem;
+    background-size: cover;
+     z-index: -1; 
+}
+
+/* #endregion */
+
+
+
+/* #endregion */
+
+
+/* #region Header Styles */
+
+.header
+{
+    width: 100%;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+.spacer
+{
+    height: 30px;
+    background-color: var(--bright-blue);
+    width: 100%;
+}
+
+.header-top
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+
+}
+
+.logo a
+{
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+}
+
+.nav
+{
+    display: flex;
+}
+
+.nav-buttons
+{
+    display: flex;
+}
+
+.nav-buttons li
+{
+    margin-right: 20px;
+}
+
+.nav-buttons li a
+{ 
+    font-size: 16px;
+    color: white;
+}
+
+.img-container
+{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-image
+{
+    
+}
+
+
+
+
+
+
+/* #endregion */
+
+/* #region Strive Styles */
+
+.strive-for
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;
+
+    background-color:antiquewhite;
+    padding: 40px 0;
+}
+
+.strive-header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.strive-text
+{
+    width: 70%;
+    font-size: 12px;
+    line-height: 20px;
+
+}
+
+.strive-cards
+{
+    padding-top: 20px;
+    width: 100%;
+    height:300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.strive-card
+{
+    background-color: var(--dark-blue);
+    width: 320px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strive-container
+{
+    height: 90%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+
+.strive-card ul li
+{
+    display: flex;
+    padding: 5px 0px;;
+    transition: font-size 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
+}
+
+
+.strive-card ul li:hover p
+{
+    font-size: calc(12px * 1.2);
+    font-weight: bold;
+}
+
+.strive-card ul li:hover img
+{
+    transform: scale(1.2);
+}
+
+
+.strive-card ul li p
+{
+    padding: 0px 5px;
+}
+
+
+.strive-card p
+{
+    color: white;
+    font-size: 12px;
+}
+
+.strive-card .btn
+{
+    background-color: var(--bright-blue);
+}
+
+
+
+
+
+/* #endregion */
+
+
+/* #region Filler About */
+
+
+.filler-about
+{
+    background-color: var(--dark-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;
+
+
+    padding: 40px 0;
+}
+
+.filler-container
+{
+    padding-top: 20px;
+    width: 100%;
+    height:300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+.filler-data
+{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.filler-data p
+{
+    color: white;
+
+}
+
+.filler-about-image-container 
+{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filler-about-image 
+{
+    max-width: 100%; 
+    height: auto;
+    fill: cover;
+}
+
+
+
+
+/* #endregion */
+
+/* #region Commends */
+
+.comments-from-clients
+{
+    height: 500px;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.comment-container
+{
+
+    width: 80%;
+    height:300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.comment
+{
+    width: 320px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 20px;
+}
+
+.comment p
+{
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.user-comment
+{
+    height: 120px;
+}
+
+.comment-info p
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment-info p span
+{
+    padding: 3px 0;
+}
+
+.comment-name
+{
+    font-weight: 600;
+}
+
+.comment-job
+{
+    font-size: 12px;
+    color: var(--soft-blue);
+}
+
+
+.comment:nth-child(odd)
+{
+    background-color: var(--bright-blue);
+}
+
+.comment:nth-child(odd) hr
+{
+    background-color: var(--soft-blue);
+}
+
+.comment:nth-child(even) .comment-job
+{
+    color: var(--dark-blue);
+}
+
+.comment:nth-child(even)
+{
+    background-color: var(--bright-yellow);
+}
+
+.comment:nth-child(even) hr
+{
+    background-color: var(--dark-blue);
+}
+
+
+
+.quote-mark-img
+{
+    width: 32px;
+    height: 32px;
+}
+
+
+/* #endregion */
+
+
+
+
+/* #region Footer */
+
+footer
+{
+    padding: 40px 0;
+    width: 100%;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top-footer
+{
+
+}
+
+.bottom-footer
+{
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-card
+{
+    height: 150px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-card p
+{
+    padding: 10px 0;
+}
+
+.footer-card ul li:nth-child(1)
+{
+    padding-top: 10px 0;
+}
+
+.footer-card ul li
+{
+    padding: 5px 0;
+}
+
+.footer-card .btn
+{
+    background-color: var(--bright-yellow);
+    cursor: pointer;
+}
+
+/* #endregion */
+
+
+
