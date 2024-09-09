@@ -1,12 +1,14 @@
 
 
-
-
-
 /* #region General Styles */
 .white-font
 {
     color: white;
+}
+
+.black-font
+{
+    color: black;
 }
 
 .mid-font

@@ -36,3 +36,24 @@
 {
     background-color: var(--bright-yellow);
 }
+
+.our-story
+{
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.our-story-container
+{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
