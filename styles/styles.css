@@ -20,131 +20,10 @@ body
 }
 
 
-:root
-{
-    --large-font:40px;
-    --mid-font:24px;
-    --base-font:14px;
-    --bright-yellow:#ffb901;
-    --soft-yellow:#ffe492;
-    --bright-blue:#3baeef;
-    --dark-blue:#043873;
-    --soft-blue:#c7e3f3;
-}
-
-
-/* #region General Styles */
-.white-font
-{
-    color: white;
-}
-
-.mid-font
-{
-    font-size: var(--mid-font);
-}
-
-.base-font
-{
-    font-size: var(--base-font);
-}
-
-.faint-blue
-{
-    color: var(--soft-blue);
-}
-
-.dark-blue
-{
-    color: var(--dark-blue);
-}
-
-.bright-yellow
-{
-    color: var(--bright-yellow);
-}
-
-.large-font
-{
-    font-size: var(--large-font);
-    font-weight: 800;
-}
-
-.base-font-size
-{
-    font-size: var(--base-font);
-}
-
-.btn
-{
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    width: 100px;
-    color: white;
-    cursor: pointer;
-    transition: filter 0.2s ease;
-}
-
-.btn:hover
-{
-    background-color: var(--soft-blue);
-    filter: brightness(80%);
-}
-
-li
-{
-    list-style-type: none;
-}
-
-
-a
-{
-    text-decoration: none;
-    cursor: pointer;
-}
-
-hr
-{
-    height: 3px;
-    border: none;
-    border-radius: 1px;
-}
-
-/* #region Making Brushstroke*/
-.brushstroke-container
-{
-    position: relative;
-    display: inline-block;
-    z-index: 2;
-}
-
-.brushstroke-word-large
-{
-    position: relative;
-    display: inline-block;
-}
-
-.brushstroke-word-large::before,
-.brushstroke-word-large::after
-{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.4rem;
-    width: 100%;
-    height: 1rem;
-    background:url('../Images/yellow-stroke.png') no-repeat center center;
-    border-radius: .25rem;
-    background-size: cover;
-     z-index: -1; 
-}
-
-/* #endregion */
 
 
 
-/* #endregion */
+
 
 
 /* #region Header Styles */
@@ -208,11 +87,6 @@ hr
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.nav-image
-{
-    
 }
 
 
