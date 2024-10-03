@@ -19,6 +19,10 @@
 -- Table structure for table `categories`
 --
 
+DROP DATABASE IF EXISTS `circuit_solutions`;
+CREATE DATABASE `circuit_solutions`;
+USE `circuit_solutions`;
+
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -198,6 +202,8 @@ CREATE TABLE `products` (
   `stock_quantity` int NOT NULL,
   `category_id` int DEFAULT NULL,
   `manufacturer_id` int DEFAULT NULL,
+  `image_url` text NOT NULL,
+  `cost` decimal(10,2) NOT NULL,
   PRIMARY KEY (`product_id`),
   KEY `category_id` (`category_id`),
   KEY `manufacturer_id` (`manufacturer_id`),
@@ -224,4 +230,15 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-02 21:15:13
+DROP TABLE IF EXISTS `tags`;
+
+CREATE TABLE `tags` (
+	`product_id` int NOT NULL,
+	`label` varchar(25) NOT NULL,
+	CONSTRAINT `tags_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+LOCK TABLES `tags` WRITE;
+/*!40000 ALTER TABLE `tags` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tags` ENABLE KEYS */;
+UNLOCK TABLES;
